@@ -25,7 +25,7 @@
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Build Description
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -33,8 +33,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=xiaomi/lavender/lavender:10/QKQ1.190910.002/V12.5.3.0.QFGCNXM:user/release-keys \
     DeviceProduct=lavender
 
+# Flags
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Device identifier
-PRODUCT_NAME := lineage_lavender
+PRODUCT_NAME := voltage_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
